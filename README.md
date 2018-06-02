@@ -17,3 +17,12 @@ $ git clone https://github.com/sdushantha/down.git
 # install the requirements
 $ pip3 install -r requirements.txt
 ```
+
+## :hammer: Usage
+```bash
+Usage: python3 down.py [file] [url]
+
+Example
+  python3 down.py url_list.txt
+  python3 down.py https://www.example.com
+```
