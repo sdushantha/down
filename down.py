@@ -55,7 +55,6 @@ def _url(site):
         print("{}   {}".format(bad, site))
 
 if len(sys.argv) == 1 or sys.argv[1] == "-h":
-    print("NO args given")
     show_help()
 
 # Checking if url or file    
