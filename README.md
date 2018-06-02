@@ -1,9 +1,12 @@
 # down
 > Check if a website is up or down.
 
+<p align="center">
 <a href="https://asciinema.org/a/185168">
-<img align="center" src="https://user-images.githubusercontent.com/27065646/40878073-dd8bfc5e-668b-11e8-8442-17de240bc646.png">
+<img src="https://user-images.githubusercontent.com/27065646/40878073-dd8bfc5e-668b-11e8-8442-17de240bc646.png">
 </a>
+</p>
+
 
 # :floppy_disk: Installation
 
