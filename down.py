@@ -9,6 +9,7 @@ bad = "\033[91m✘\033[0m"
 # Header is needed for some sites or else they will think
 # that a bot is accessing the site wont return 200
 headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:55.0) Gecko/20100101 Firefox/55.0'}
+
 def show_help():
     help_message = """
     Usage: python3 down.py [file] [url]
@@ -53,9 +54,10 @@ def _url(site):
     except:
         print("{}   {}".format(bad, site))
 
-if len(sys.argv) == 1 or sys.argv[1] == "-h" or "--help":
+if len(sys.argv) == 1 or sys.argv[1] == "-h":
+    print("NO args given")
     show_help()
-    
+
 # Checking if url or file    
 if sys.argv[1].startswith("http"):
     _url(sys.argv[1])
