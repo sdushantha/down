@@ -53,7 +53,7 @@ def _url(site):
     except:
         print("{}   {}".format(bad, site))
 
-if len(sys.argv) == 0 or sys.argv[1] == "-h" or "--help":
+if len(sys.argv) == 1 or sys.argv[1] == "-h" or "--help":
     show_help()
     
 # Checking if url or file    
