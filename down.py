@@ -22,38 +22,31 @@ def show_help():
     print(help_message)
     sys.exit()
 
-def _file(fname):
+def printStatus(up, site):
+    good = "\033[92m✔\033[0m"
+    bad = "\033[91m✘\033[0m"
+    print("{}   {}".format(good if up else bad, site))
+
+
+def _file(file):
     try:
-        with open(fname, "r") as f:
+        with open(file, "r") as f:
             for site in f:
                 site = site.strip()
-
-                try:
-                    r = requests.get(site, headers=headers)
-                    if r.status_code != 200:
-                        print("{}   {}".format(bad, site))
-
-                    else:
-                        print("{}   {}".format(good, site))
-
-                except:
-                    print("{}   {}".format(bad, site))
-
+                _url(site)
     except FileNotFoundError:
-        print("No such file: "+fname)
+        print("No such file: " + file)
 
 def _url(site):
     try:
         r = requests.get(site)
         if r.status_code != 200:
-            print("{}   {}".format(bad, site))
-
+            printStatus(False, site)
         else:
-            print("{}   {}".format(good, site))
-    
+            printStatus(True, site)
     except:
-        print("{}   {}".format(bad, site))
-
+        printStatus(False, site)
+        
 if len(sys.argv) == 1 or sys.argv[1] == "-h":
     show_help()
 
