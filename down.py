@@ -41,7 +41,7 @@ def print_status(up, site):
     :type site: str
     """
 
-    sys.stdout.write("{}   {}".format(good if up else bad, site))
+    sys.stdout.write("{}   {}\n".format(good if up else bad, site))
 
 
 def _file(file):
