@@ -57,7 +57,7 @@ def _file(file):
                 site = site.strip()
                 _url(site)
     except FileNotFoundError:
-        sys.stdout.write("No such file: {}".format(file))
+        sys.stdout.write("No such file: {}\n".format(file))
 
 
 def _url(site):
@@ -76,12 +76,20 @@ def _url(site):
         print_status(False, site)
 
 
-if len(sys.argv) == 1 or sys.argv[1] == "-h":
-    show_help()
+def down():
+    """
+    Entry point to the app.
+    """
+    if len(sys.argv) == 1 or sys.argv[1] == "-h":
+        show_help()
 
-# Checking if url or file    
-if sys.argv[1].startswith("http"):
-    _url(sys.argv[1])
-    sys.exit()
+    # Checking if url or file
+    if sys.argv[1].startswith("http"):
+        _url(sys.argv[1])
+        sys.exit()
 
-_file(sys.argv[1])
+    _file(sys.argv[1])
+
+
+if __name__ == '__main__':
+    down()

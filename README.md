@@ -11,18 +11,14 @@
 # :floppy_disk: Installation
 
 ```bash
-# clone the repo
-$ git clone https://github.com/sdushantha/down.git
-
-# install the requirements
-$ pip3 install -r requirements.txt
+$ pip install down
 ```
 
 ## :hammer: Usage
 ```bash
-Usage: python3 down.py [file] [url]
+Usage: down [file] [url]
 
 Example
-  python3 down.py url_list.txt
-  python3 down.py https://www.example.com
+  down url_list.txt
+  down https://www.example.com
 ```
