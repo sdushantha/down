@@ -8,17 +8,13 @@
 </p>
 
 
-# :floppy_disk: Installation
+# Installation
 
 ```bash
-# clone the repo
-$ git clone https://github.com/sdushantha/down.git
-
-# install the requirements
-$ pip3 install -r requirements.txt
+$ pip install --user down
 ```
 
-## :hammer: Usage
+## Usage
 ```bash
 Usage: python3 down.py [file] [url]
 
