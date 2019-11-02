@@ -16,9 +16,9 @@ $ pip install --user down
 
 ## Usage
 ```bash
-Usage: python3 down.py [file] [url]
+Usage: down [file] [url]
 
 Example
-  python3 down.py url_list.txt
-  python3 down.py https://www.example.com
+  down url_list.txt
+  down https://www.example.com
 ```
